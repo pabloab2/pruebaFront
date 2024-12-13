@@ -22,7 +22,7 @@ const EventoFormulario = () => {
     // Cargar datos del servidor si estamos en modo edición
     useEffect(() => {
         if (eventId) { // `http://localhost:8082/examen/${eventId}`
-            fetch(`https://prueba-front-cywubtvuj-pablos-projects-36017d09.vercel.app/examen/${eventId}`)
+            fetch(`https://pruebaback-production-1bfd.up.railway.app/examen/${eventId}`)
                 .then((response) => {
                     if (!response.ok) {
                         throw new Error('Error al cargar los datos del evento');
@@ -79,7 +79,7 @@ const EventoFormulario = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const method = eventId ? 'PUT' : 'POST'; // http://localhost:8082
-        const url = `https://prueba-front-cywubtvuj-pablos-projects-36017d09.vercel.app/examen${eventId ? `/${eventId}` : ''}`;
+        const url = `https://pruebaback-production-1bfd.up.railway.app/examen${eventId ? `/${eventId}` : ''}`;
 
         const data = new FormData();
         data.append('nombre', formData.nombre);

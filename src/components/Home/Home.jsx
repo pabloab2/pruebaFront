@@ -29,7 +29,7 @@ const Eventos = () => {
 
     // Cargar la lista de eventos desde el servidor
     useEffect(() => { // http://localhost:8082/examen
-        fetch('https://prueba-front-cywubtvuj-pablos-projects-36017d09.vercel.app/examen')
+        fetch('https://pruebaback-production-1bfd.up.railway.app/examen')
             .then((response) => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -68,7 +68,7 @@ const Eventos = () => {
         const confirmed = window.confirm('¿Estás seguro de que quieres eliminar este evento?');
         if (!confirmed) return;
         //`http://localhost:8082/examen/${eventId}`
-        fetch(`https://prueba-front-cywubtvuj-pablos-projects-36017d09.vercel.app/examen/${eventId}`, {
+        fetch(`https://pruebaback-production-1bfd.up.railway.app/examen/${eventId}`, {
             method: 'DELETE',
         })
             .then((response) => {
