@@ -9,8 +9,8 @@ const DetalleEvento = () => {
     const [evento, setEvento] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        fetch(`http://localhost:8082/examen/${eventId}`)
+    useEffect(() => { // `http://localhost:8082/examen/${eventId}`
+        fetch(`https://prueba-front-cywubtvuj-pablos-projects-36017d09.vercel.app/examen/${eventId}`)
             .then((response) => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
